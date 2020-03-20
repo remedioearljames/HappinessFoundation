@@ -1,7 +1,5 @@
-﻿{
-	"Questions": 
-	[
-		{
+﻿[
+	{
 		"QuestionID": 0,
 		"Question": "First Question",
 		"Choices": 
@@ -47,9 +45,10 @@
 				}
 			]
 		},
-		"QuestionID": 2,
-		"Question": "Third Question",
-		"Choices": 
+		{
+			"QuestionID": 2,
+			"Question": "Third Question",
+			"Choices": 
 			[	
 				{
 				"ChoiceID": 0,
@@ -68,7 +67,6 @@
 				"Choice": "Choice1"
 				}
 			]
-		},
-
-	]
-}
+		}
+]
+ 

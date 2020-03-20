@@ -4,16 +4,20 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             Title="{Binding Title}"
              x:Class="HappinessFoundation.Views.Form1">
     <ContentPage.Content>
         <StackLayout 
+            BackgroundColor="Transparent"
             Margin="5" 
             HorizontalOptions="FillAndExpand" 
             VerticalOptions="FillAndExpand" >
 
             <CarouselView ItemsSource="{Binding Questions}">
                 <CarouselView.ItemsLayout>
-                    <LinearItemsLayout Orientation="Horizontal" />
+                    <LinearItemsLayout Orientation="Horizontal"   
+                           SnapPointsType="MandatorySingle"
+                           SnapPointsAlignment="Center" /> 
                 </CarouselView.ItemsLayout>
                 <CarouselView.ItemTemplate>
                     <DataTemplate>
@@ -30,9 +34,9 @@
                                FontAttributes="Bold"
                                FontSize="Large"
                                HorizontalOptions="Center"
-                               VerticalOptions="Center" />
+                               VerticalOptions="StartAndExpand" />
 
-                                    <ListView ItemsSource="{Binding Choices}" >
+                                    <ListView VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" ItemsSource="{Binding Choices}" >
                                         <ListView.ItemTemplate>
                                             <DataTemplate>
                                                 <ViewCell>

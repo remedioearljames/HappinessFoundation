@@ -20,7 +20,7 @@ namespace HappinessFoundation
         {
             InitializeComponent();
 
-            MainPage = new LoginPage();
+            MainPage = new MainPage();
 
             //if (UseMockDataStore)
             //    DependencyService.Register<MockDataStore>();

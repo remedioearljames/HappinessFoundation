@@ -50,7 +50,7 @@ namespace HappinessFoundation.ViewModels
             {
                 if (Email == "abc@gmail.com" && Password == "1234")
                 {
-                    App.Current.MainPage.DisplayAlert("Login Success", "", "Ok");
+                    //App.Current.MainPage.DisplayAlert("Login Success", "", "Ok");
                     //Navigate to Wellcom page after successfully login  
                     App.Current.MainPage = new MainPage();
                 }
