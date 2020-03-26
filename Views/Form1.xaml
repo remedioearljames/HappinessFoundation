@@ -7,36 +7,39 @@
              Title="{Binding Title}"
              x:Class="HappinessFoundation.Views.Form1">
     <ContentPage.Content>
-        <StackLayout 
-            BackgroundColor="Transparent"
-            Margin="5" 
-            HorizontalOptions="FillAndExpand" 
-            VerticalOptions="FillAndExpand" >
+        <StackLayout BackgroundColor="Transparent"
+                     Margin="5" 
+                     HorizontalOptions="FillAndExpand" 
+                     VerticalOptions="FillAndExpand" >
 
             <CarouselView ItemsSource="{Binding Questions}">
                 <CarouselView.ItemsLayout>
                     <LinearItemsLayout Orientation="Horizontal"   
-                           SnapPointsType="MandatorySingle"
-                           SnapPointsAlignment="Center" /> 
+                                       SnapPointsType="MandatorySingle"
+                                       SnapPointsAlignment="Center" /> 
                 </CarouselView.ItemsLayout>
                 <CarouselView.ItemTemplate>
                     <DataTemplate>
                         <StackLayout>
                             <Frame HasShadow="True"
-                       BorderColor="DarkGray"
-                       CornerRadius="5"
-                       Margin="20"
-                       HeightRequest="300"
-                       HorizontalOptions="Center"
-                       VerticalOptions="CenterAndExpand">
-                                <StackLayout>
+                                   BorderColor="DarkGray"
+                                   CornerRadius="5"
+                                   Margin="10,50,10,50"
+                              
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="CenterAndExpand">
+                                <StackLayout VerticalOptions="FillAndExpand" 
+                                             HorizontalOptions="FillAndExpand">
                                     <Label Text="{Binding Question}"
-                               FontAttributes="Bold"
-                               FontSize="Large"
-                               HorizontalOptions="Center"
-                               VerticalOptions="StartAndExpand" />
+                                           FontAttributes="Bold"
+                                           FontSize="Large"
+                                           HorizontalOptions="CenterAndExpand"
+                                           VerticalOptions="FillAndExpand" 
+                                           Padding="0,0,0,15"/>
 
-                                    <ListView VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" ItemsSource="{Binding Choices}" >
+                                    <ListView VerticalOptions="FillAndExpand" 
+                                              HorizontalOptions="FillAndExpand" 
+                                              ItemsSource="{Binding Choices}" >
                                         <ListView.ItemTemplate>
                                             <DataTemplate>
                                                 <ViewCell>
@@ -46,7 +49,10 @@
                                                         <Label LineBreakMode="WordWrap">
                                                             <Label.FormattedText>
                                                                 <FormattedString>
-                                                                    <Span Text="• " TextColor="Red" FontAttributes="Bold" />
+                                                                    <Span Text="• " 
+                                                                          TextColor="Black" 
+                                                                          FontAttributes="Bold" />
+                                                                    
                                                                     <Span Text="{Binding Choice}" />
                                                                 </FormattedString>
                                                             </Label.FormattedText>

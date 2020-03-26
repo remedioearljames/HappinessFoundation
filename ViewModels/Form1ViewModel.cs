@@ -14,6 +14,13 @@ namespace HappinessFoundation.ViewModels
 {
     class Form1ViewModel : BaseViewModel
     {
+        
+        public Form1ViewModel()
+        {
+            Title = "Questions";
+            Questions = new ObservableCollection<Form1Model>();
+            LoadQuestions = new Command(async () => await ExecuteLoadQuestionsCommand());
+        }
         public ObservableCollection<Form1Model> question { get; set; }
 
         public ObservableCollection<Form1Model> Questions
@@ -30,15 +37,8 @@ namespace HappinessFoundation.ViewModels
             {
                 return question;
             }
-        } 
-        public Command LoadQuestions { get; set; }
-        public Form1ViewModel()
-        {
-            Title = "Questions";
-            Questions = new ObservableCollection<Form1Model>();
-            LoadQuestions = new Command(async () => await ExecuteLoadQuestionsCommand());
         }
-
+        public Command LoadQuestions { get; set; }
         async Task ExecuteLoadQuestionsCommand() 
         {
             if (IsBusy) return;

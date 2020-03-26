@@ -1,70 +1,94 @@
 ﻿[
 	{
 		"QuestionID": 0,
-		"Question": "First Question",
+		"Question": "I don’t feel particularly pleased with the way I am.",
 		"Choices": 
 			[	
 				{
 				"ChoiceID": 0,
-				"Choice": "Choice1"
+				"Choice": "Strongly Disagree"
 				},
 				{
 				"ChoiceID": 1,
-				"Choice": "Choice1"
+				"Choice": "Moderately Disagree"
 				},
 				{
 				"ChoiceID": 2,
-				"Choice": "Choice1"
+				"Choice": "Slightly Disagree"
 				},
 				{
 				"ChoiceID": 3,
-				"Choice": "Choice1"
+				"Choice": "Slightly Agree"
+				},
+				{
+				"ChoiceID": 4,
+				"Choice": "Moderately Agree"
+				},
+				{
+				"ChoiceID": 5,
+				"Choice": "Strongly Agree"
 				}
 			]
 		},
 		{
 		"QuestionID": 1,
-		"Question": "Second Question",
+		"Question": "I am intensely interested in other people.",
 		"Choices": 
 			[	
 				{
 				"ChoiceID": 0,
-				"Choice": "Choice1"
+				"Choice": "Strongly Disagree"
 				},
 				{
 				"ChoiceID": 1,
-				"Choice": "Choice1"
+				"Choice": "Moderately Disagree"
 				},
 				{
 				"ChoiceID": 2,
-				"Choice": "Choice1"
+				"Choice": "Slightly Disagree"
 				},
 				{
 				"ChoiceID": 3,
-				"Choice": "Choice1"
+				"Choice": "Slightly Agree"
+				},
+				{
+				"ChoiceID": 4,
+				"Choice": "Moderately Agree"
+				},
+				{
+				"ChoiceID": 5,
+				"Choice": "Strongly Agree"
 				}
 			]
 		},
 		{
 			"QuestionID": 2,
-			"Question": "Third Question",
+			"Question": "I feel that life is very rewarding.",
 			"Choices": 
 			[	
 				{
 				"ChoiceID": 0,
-				"Choice": "Choice1"
+				"Choice": "Strongly Disagree"
 				},
 				{
 				"ChoiceID": 1,
-				"Choice": "Choice1"
+				"Choice": "Moderately Disagree"
 				},
 				{
 				"ChoiceID": 2,
-				"Choice": "Choice1"
+				"Choice": "Slightly Disagree"
 				},
 				{
 				"ChoiceID": 3,
-				"Choice": "Choice1"
+				"Choice": "Slightly Agree"
+				},
+				{
+				"ChoiceID": 4,
+				"Choice": "Moderately Agree"
+				},
+				{
+				"ChoiceID": 5,
+				"Choice": "Strongly Agree"
 				}
 			]
 		}
