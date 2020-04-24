@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="Introduction"
+             x:Class="HappinessFoundation.Views.LanguageLearningIntroduction">
+    <ContentPage.Content>
+        <StackLayout Margin="20">
+            <Label Text="Zulu (/zuːluː/) or isiZulu (isiZulu) is a Southern Bantu language of the Nguni branch spoken in Southern Africa. It is the language of the Zulu people, with about 12 million native speakers, who primarily inhabit the province of KwaZulu-Natal of South Africa. Zulu is the most widely spoken home language in South Africa (24% of the population), and it is understood by over 50% of its population.[5][a] It became one of South Africa's 11 official languages in 1994."
+                   VerticalOptions="StartAndExpand" 
+                   HorizontalOptions="CenterAndExpand"
+                   TextColor="Black"
+                   FontSize="Large"/>
+            <Button Text="Complete" 
+                    BackgroundColor="DarkSeaGreen"  
+                    Clicked="Button_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

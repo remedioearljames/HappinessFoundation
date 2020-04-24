@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Name="this"
+             HeightRequest="60"
+             BackgroundColor="DeepSkyBlue"
+             x:Class="HappinessFoundation.Views.Subviews.ModalHeader">
+  <ContentView.Content>
+        <StackLayout BindingContext="{x:Reference this}" Orientation="Horizontal">
+            <Button Text="x" 
+                    FontSize="Title" 
+                    TextColor="Transparent" 
+                    BackgroundColor="Transparent" 
+                    HorizontalOptions="Start"  />
+            
+            <Label Text="{Binding Title, FallbackValue='Title'}" 
+                   FontSize="Title" 
+                   x:Name="title"
+                   TextColor="Black" 
+                   HorizontalOptions="CenterAndExpand" 
+                   Margin="15"/>
+            
+            <Button Text="x" 
+                    BackgroundColor="Transparent" 
+                    HorizontalOptions="End"  
+                    FontSize="Large" 
+                    Padding="0" 
+                    Margin="0,0,0,0"
+                    Clicked="CloseClicked"/>
+        </StackLayout>
+  </ContentView.Content>
+</ContentView>

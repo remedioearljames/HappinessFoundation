@@ -4,6 +4,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using HappinessFoundation.Services;
 using HappinessFoundation.Views;
+using HappinessFoundation.Views.Login;
 
 namespace HappinessFoundation
 {
@@ -18,9 +19,11 @@ namespace HappinessFoundation
 
         public App()
         {
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MjQ2NDI3QDMxMzgyZTMxMmUzMEJrbk9pUzZEQ2VPN3FsMTdLblFQdUpKZkFQNXBUYWxHdVhpNlVsZkg3TTg9");
+            
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new LoginWithSocialIconPage();
 
             //if (UseMockDataStore)
             //    DependencyService.Register<MockDataStore>();

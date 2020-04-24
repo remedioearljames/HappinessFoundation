@@ -8,17 +8,14 @@ using System.IO;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace HappinessFoundation.ViewModels
 {
-    class Form1ViewModel : BaseViewModel
+    class LanguageLearningMultipleChoiceViewModel : BaseViewModel
     {
-       
-        public Form1ViewModel()
+        public LanguageLearningMultipleChoiceViewModel()
         {
-            Title = "Questions";
             Questions = new ObservableCollection<Form1Model>();
             LoadQuestions = new Command(async () => await ExecuteLoadQuestionsCommand());
         }
@@ -40,7 +37,7 @@ namespace HappinessFoundation.ViewModels
             }
         }
         public Command LoadQuestions { get; set; }
-        async Task ExecuteLoadQuestionsCommand() 
+        async Task ExecuteLoadQuestionsCommand()
         {
             if (IsBusy) return;
 
@@ -63,7 +60,7 @@ namespace HappinessFoundation.ViewModels
                     //Converting JSON Array Objects into generic list    
                     Questions = JsonConvert.DeserializeObject<ObservableCollection<Form1Model>>(jsonString);
                 }
-                
+
                 #endregion
             }
             catch (Exception ex)
@@ -74,9 +71,9 @@ namespace HappinessFoundation.ViewModels
             {
                 IsBusy = false;
             }
- 
+
         }
-         
+
 
     }
 }

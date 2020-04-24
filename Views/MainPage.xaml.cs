@@ -6,6 +6,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 using HappinessFoundation.Models;
+using HappinessFoundation.Views.Login;
 
 namespace HappinessFoundation.Views
 {
@@ -37,7 +38,7 @@ namespace HappinessFoundation.Views
                         MenuPages.Add(id, new NavigationPage(new AboutPage()));
                         break;
                     case (int)MenuItemType.Logout:
-                        App.Current.MainPage = new LoginPage();
+                        App.Current.MainPage = new LoginWithSocialIconPage();
                         break;
                 }
             }

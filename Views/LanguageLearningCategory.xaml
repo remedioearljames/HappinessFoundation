@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="Language Learning"
+             x:Class="HappinessFoundation.Views.LanguageLearningCategory"
+              xmlns:converter="clr-namespace:HappinessFoundation.Converters"
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converter:BooleanToColorConverter x:Key="ColorConverter" />
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout Margin="5" Spacing="10"
+                     VerticalOptions="Start">
+            
+            <Label Text="" 
+                   FontSize="Title"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Start"
+                   />
+            <Label  Text="Select a language to learn."
+                    FontAttributes="Bold"
+                    FontSize="Large"
+                    HorizontalOptions="Center" />
+            <Picker  
+                    x:Name="LanguageSelector"
+                    Title="Select Language"
+                    SelectedIndexChanged="Picker_SelectedIndexChanged">
+                    <Picker.Items>
+                    <x:String>Zulu</x:String>
+                    <x:String>Maori</x:String>
+                    <x:String>Te Reo</x:String>
+                    <x:String>Yuddish</x:String>
+                    </Picker.Items>
+            </Picker>
+
+            <buttons:SfButton   Text="Introduction" 
+                                HorizontalOptions="FillAndExpand" 
+                                FontSize="Large" 
+                                FontAttributes="Bold"
+                                Clicked="IntroductionTapped"
+                                CornerRadius="5"                                                  
+                                HeightRequest="50"
+                                Style="{StaticResource SfButtonStyle}"/>
+  
+            <buttons:SfButton   Text="Beginner" 
+                                HorizontalOptions="FillAndExpand" 
+                                BackgroundColor="DarkSeaGreen" 
+                                FontSize="Large" 
+                                FontAttributes="Bold"
+                                Clicked="BeginnerClicked"
+                                IsEnabled="True"
+                                Style="{StaticResource SfButtonStyle}"                              
+                                CornerRadius="5"
+                                HeightRequest="50"
+                    />
+            <buttons:SfButton   Text="Intermediate" 
+                                HorizontalOptions="FillAndExpand" 
+                                BackgroundColor="DarkSeaGreen" 
+                                FontSize="Large" 
+                                FontAttributes="Bold"
+                                Clicked="IntermediateTapped"
+                                HeightRequest="50"
+                                IsEnabled="False"
+                                CornerRadius="5"
+                                Style="{StaticResource SfButtonStyle}"/>
+            
+            <buttons:SfButton   Text="Advanced" 
+                                HorizontalOptions="FillAndExpand" 
+                                BackgroundColor="DarkSeaGreen" 
+                                FontSize="Large" 
+                                FontAttributes="Bold"
+                                HeightRequest="50"
+                                Clicked="AdvanceTapped"
+                                CornerRadius="5"
+                                IsEnabled="False"
+                                Style="{StaticResource SfButtonStyle}"/>
+            
+        </StackLayout>
+       
+    </ContentPage.Content>
+</ContentPage>

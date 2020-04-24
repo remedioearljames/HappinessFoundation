@@ -11,16 +11,13 @@ using Xamarin.Forms.Xaml;
 namespace HappinessFoundation.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Form1 : ContentPage
+    public partial class LanguageLearningMultipleChoice : ContentPage
     {
-        Form1ViewModel viewModel;
-
-        public Form1()
+        LanguageLearningMultipleChoiceViewModel viewModel;
+        public LanguageLearningMultipleChoice()
         {
-          
             InitializeComponent();
-            BindingContext = viewModel = new Form1ViewModel();
-
+            BindingContext = viewModel = new LanguageLearningMultipleChoiceViewModel();
         }
         protected override void OnAppearing()
         {
@@ -29,15 +26,10 @@ namespace HappinessFoundation.Views
             if (viewModel.Questions.Count == 0)
                 viewModel.LoadQuestions.Execute(null);
             BindingContext = viewModel;
+
         }
-
-         
-
         private void SubmitTapped(object sender, EventArgs e)
         {
-            
-            Navigation.PushAsync(new ResultsPage(), false);
-            
         }
     }
 }

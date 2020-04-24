@@ -1,5 +1,4 @@
-﻿using HappinessFoundation.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,16 +10,16 @@ using Xamarin.Forms.Xaml;
 namespace HappinessFoundation.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class LoginPage : ContentPage
+    public partial class LanguageLearningIntroduction : ContentPage
     {
-        LoginViewModel viewModel;
-
-        public LoginPage()
+        public LanguageLearningIntroduction()
         {
             InitializeComponent();
-            BindingContext = viewModel = new LoginViewModel();
         }
 
-        
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PopAsync(false);
+        }
     }
 }

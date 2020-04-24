@@ -6,6 +6,9 @@
              mc:Ignorable="d"
              Title="{Binding Title}"
              x:Class="HappinessFoundation.Views.Form1">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Submit" Clicked="SubmitTapped"/>
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout BackgroundColor="Transparent"
                      Margin="5" 
@@ -25,7 +28,6 @@
                                    BorderColor="DarkGray"
                                    CornerRadius="5"
                                    Margin="10,50,10,50"
-                              
                                    HorizontalOptions="Center"
                                    VerticalOptions="CenterAndExpand">
                                 <StackLayout VerticalOptions="FillAndExpand" 

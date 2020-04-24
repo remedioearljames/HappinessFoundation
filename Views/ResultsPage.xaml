@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:Subview="clr-namespace:HappinessFoundation.Views.Subviews" 
+             xmlns:local="clr-namespace:HappinessFoundation.Views.Login"
+             mc:Ignorable="d"
+             Title="Result"
+             x:Class="HappinessFoundation.Views.ResultsPage"
+             xmlns:converter="clr-namespace:HappinessFoundation.Converters"
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converter:BooleanToColorConverter x:Key="ColorConverter" />
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Congratulations!! You are 99% Happy. "
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="CenterAndExpand" 
+                   TextColor="Black"
+                   FontSize="Large"/>
+            
+            <buttons:SfButton
+                        Margin="16"
+                        VerticalOptions="CenterAndExpand" 
+                        HorizontalOptions="CenterAndExpand" 
+                        CornerRadius="10"
+                        HeightRequest="50"
+                        Clicked="Button_Clicked"
+                        Style="{StaticResource SfButtonStyle}"
+                        Text="Learn new language." />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
